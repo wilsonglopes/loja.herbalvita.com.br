@@ -1,214 +1,57 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HerbalVita - Nutrição e Equilíbrio Natural</title>
-    <meta name="description" content="Conheça a linha de produtos naturais da HerbalVita. Qualidade, transparência e bem-estar para a sua rotina.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    colors: {
-                        herbal: {
-                            50: '#f2fcf5',
-                            100: '#e1f8e8',
-                            500: '#22c55e', // Verde Natureza
-                            700: '#15803d',
-                            900: '#14532d',
-                        },
-                        stone: {
-                            850: '#1c1917',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Ajuste fino para imagens */
-        .product-card:hover { transform: translateY(-5px); }
-        .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1544367563-12123d8965cd?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
-</head>
-<body class="font-sans text-stone-700 bg-stone-50 antialiased">
-
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex-shrink-0">
-                <a href="#">
-                    <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/criativos/logo_herbalvita_hd1.png" alt="HerbalVita Logo" class="h-12 w-auto object-contain">
-                </a>
-            </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#sobre" class="hover:text-herbal-700 transition">A Marca</a>
-                <a href="#produtos" class="hover:text-herbal-700 transition">Produtos</a>
-                <a href="#contato" class="hover:text-herbal-700 transition">Atendimento</a>
-            </div>
-            <a href="#produtos" class="bg-herbal-700 hover:bg-herbal-900 text-white px-5 py-2 rounded-full text-sm font-medium transition shadow-md">
-                Conhecer Linha
-            </a>
-        </nav>
-    </header>
-
-    <section class="hero-bg h-[500px] flex items-center justify-center text-center px-4">
-        <div class="max-w-3xl text-white">
-            <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6 shadow-sm">
-                Equilíbrio natural para <br>a sua rotina.
-            </h1>
-            <p class="text-lg md:text-xl opacity-90 mb-8 font-light">
-                Descubra o poder dos ingredientes selecionados. Uma jornada de bem-estar, transparência e respeito pelo seu corpo.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#produtos" class="bg-white text-herbal-900 font-semibold px-8 py-3 rounded-full hover:bg-stone-100 transition shadow-lg">
-                    Ver Produtos
-                </a>
-            </div>
+<section class="relative h-[600px] flex items-center justify-center overflow-hidden">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1470114716159-e389f87b9645?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Natureza e Bem-estar" 
+                 class="w-full h-full object-cover">
         </div>
-    </section>
 
-    <section id="sobre" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <span class="text-herbal-700 font-bold text-sm uppercase tracking-wider mb-2 block">Nossa Filosofia</span>
-                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-6">Compromisso com a pureza e a qualidade.</h2>
-                    <p class="text-stone-600 mb-6 leading-relaxed">
-                        A HerbalVita nasceu com o propósito de simplificar o cuidado pessoal. Acreditamos que a natureza oferece os melhores recursos para manter o equilíbrio do organismo.
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-herbal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-stone-700">Ingredientes selecionados rigorosamente.</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-herbal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-stone-700">Fórmulas livres de aditivos desnecessários.</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-herbal-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-stone-700">Transparência em cada rótulo.</span>
-                        </li>
-                    </ul>
+        <div class="absolute inset-0 z-10 bg-gradient-to-r from-herbal-900/95 via-herbal-900/80 to-herbal-800/40"></div>
+
+        <div class="relative z-20 container mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
+            
+            <div class="text-white max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    <span class="text-xs font-medium tracking-wide uppercase">Fórmula Exclusiva HerbalVita</span>
                 </div>
-                <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070&auto=format&fit=crop" alt="Ingredientes Naturais" class="rounded-lg shadow-xl object-cover h-[400px] w-full">
-                    <div class="absolute -bottom-6 -left-6 bg-herbal-50 p-6 rounded-lg shadow-md hidden md:block border border-herbal-100">
-                        <p class="text-herbal-900 font-serif font-bold text-xl">100%</p>
-                        <p class="text-sm text-herbal-700">Foco em qualidade</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="produtos" class="py-16 bg-stone-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-4">Nossa Linha</h2>
-                <p class="text-stone-600">Soluções pensadas para diferentes momentos do seu dia e fases da vida.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
+                <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight shadow-sm">
+                    A pureza da natureza <br> 
+                    <span class="text-green-300">potencializando</span> sua vida.
+                </h1>
                 
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-stone-200 product-card transition-all duration-300 flex flex-col">
-                    <div class="h-64 bg-pink-50 flex items-center justify-center p-4">
-                        <img src="https://prostvita.com.br/wp-content/uploads/2025/09/kit3.webp" alt="EllaCandy Kit" class="h-full object-contain">
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">EllaCandy Protocolo</h3>
-                        <p class="text-sm text-stone-500 mb-4 font-medium uppercase tracking-wide">Bem-estar Íntimo Feminino</p>
-                        <p class="text-stone-600 mb-6 text-sm leading-relaxed flex-grow">
-                            Uma fórmula desenvolvida especialmente para mulheres que buscam reequilibrar a flora e manter a confiança no dia a dia. Suporte nutricional completo.
-                        </p>
-                        <a href="/ellacandy.html" class="block text-center bg-stone-900 text-white font-medium py-3 rounded-lg hover:bg-stone-700 transition">
-                            Saiba Mais
-                        </a>
-                    </div>
+                <p class="text-lg text-gray-100 mb-8 font-light leading-relaxed max-w-lg">
+                    Ingredientes de padrão internacional selecionados para garantir máxima absorção e resultados reais. O cuidado que o seu corpo merece.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#produtos" class="bg-white text-herbal-900 font-bold px-8 py-4 rounded-full hover:bg-green-50 transition shadow-[0_0_20px_rgba(255,255,255,0.3)] text-center">
+                        Ver Coleção Premium
+                    </a>
+                    <a href="#sobre" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/30 hover:bg-white/10 transition text-white font-medium">
+                        Nossa História
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </a>
                 </div>
 
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-stone-200 product-card transition-all duration-300 flex flex-col">
-                    <div class="h-64 bg-green-50 flex items-center justify-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1594135546059-e935402636e7?q=80&w=2070&auto=format&fit=crop" alt="Vita Daily" class="h-full w-full object-cover opacity-90">
+                <div class="mt-12 pt-8 border-t border-white/10 flex flex-wrap gap-6 md:gap-12 opacity-80">
+                    <div class="flex items-center gap-3">
+                        <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">Qualidade<br>Certificada</span>
                     </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">VitaDaily A-Z</h3>
-                        <p class="text-sm text-stone-500 mb-4 font-medium uppercase tracking-wide">Energia e Imunidade</p>
-                        <p class="text-stone-600 mb-6 text-sm leading-relaxed flex-grow">
-                            Suplemento multivitamínico essencial para complementar sua alimentação e manter os níveis de energia sempre estáveis.
-                        </p>
-                        <button class="block w-full bg-white border-2 border-stone-900 text-stone-900 font-medium py-3 rounded-lg hover:bg-stone-50 transition">
-                            Em Breve
-                        </button>
+                    <div class="flex items-center gap-3">
+                        <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        <span class="text-sm font-medium">Ingredientes<br>Naturais</span>
                     </div>
-                </div>
-
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-stone-200 product-card transition-all duration-300 flex flex-col">
-                    <div class="h-64 bg-blue-50 flex items-center justify-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1515942400420-2b98fed1f515?q=80&w=1974&auto=format&fit=crop" alt="Zen Night" class="h-full w-full object-cover opacity-90">
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">ZenNight</h3>
-                        <p class="text-sm text-stone-500 mb-4 font-medium uppercase tracking-wide">Relaxamento e Sono</p>
-                        <p class="text-stone-600 mb-6 text-sm leading-relaxed flex-grow">
-                            Ingredientes naturais que auxiliam no relaxamento noturno, ideal para quem busca uma rotina de descanso mais tranquila.
-                        </p>
-                        <button class="block w-full bg-white border-2 border-stone-900 text-stone-900 font-medium py-3 rounded-lg hover:bg-stone-50 transition">
-                            Em Breve
-                        </button>
+                    <div class="flex items-center gap-3">
+                        <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <span class="text-sm font-medium">Alta<br>Potência</span>
                     </div>
                 </div>
-
             </div>
+
+            <div class="hidden md:block">
+                </div>
         </div>
     </section>
-
-    <section class="bg-white py-12 border-t border-stone-200">
-        <div class="container mx-auto px-6 max-w-4xl text-center">
-            <h3 class="font-bold text-stone-800 mb-4">Informações Importantes</h3>
-            <p class="text-xs text-stone-500 leading-relaxed mb-4">
-                Os produtos comercializados neste site são suplementos alimentares e não devem ser utilizados como substitutos de uma dieta equilibrada e variada, nem de um estilo de vida saudável.
-            </p>
-            <p class="text-xs text-stone-500 leading-relaxed">
-                <strong>Isenção de responsabilidade:</strong> As informações apresentadas neste site têm caráter meramente informativo e educacional. Não prometemos cura, tratamento ou diagnóstico de doenças. Os resultados podem variar de pessoa para pessoa e não são garantidos. Consulte sempre um profissional de saúde antes de iniciar qualquer suplementação, especialmente se estiver grávida, amamentando ou tomando medicamentos. Este site não é afiliado ao Facebook ou a qualquer entidade do Meta.
-            </p>
-        </div>
-    </section>
-
-    <footer id="contato" class="bg-stone-900 text-stone-300 py-12">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-                <div class="mb-6 md:mb-0">
-                    <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/criativos/logo_herbalvita_hd1.png" alt="HerbalVita Logo" class="h-10 w-auto object-contain mb-3 opacity-90 grayscale hover:grayscale-0 transition">
-                    <p class="text-sm mt-2 max-w-xs">Nutrição inteligente e natural para uma vida mais plena e equilibrada.</p>
-                </div>
-                <div class="flex space-x-6 text-sm">
-                    <a href="#" class="hover:text-white transition">Política de Privacidade</a>
-                    <a href="#" class="hover:text-white transition">Termos de Uso</a>
-                    <a href="#" class="hover:text-white transition">Contato</a>
-                </div>
-            </div>
-            <div class="border-t border-stone-800 pt-8 text-center md:text-left text-xs text-stone-500">
-                <p>&copy; 2025 Herbal Vita Produtos Naturais Ltda. Todos os direitos reservados.</p>
-                <p class="mt-2">CNPJ: 00.000.000/0001-00 | Endereço: Av. Paulista, 1000 - São Paulo/SP</p>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
