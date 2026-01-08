@@ -68,17 +68,17 @@
         </nav>
     </header>
 
-    <section class="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
+    <section class="relative min-h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden bg-herbal-900">
         
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1470114716159-e389f87b9645?q=80&w=2070&auto=format&fit=crop" 
                  alt="Natureza e Bem-estar" 
-                 class="w-full h-full object-cover animate-[pulse_10s_ease-in-out_infinite] scale-105">
+                 class="w-full h-full object-cover animate-[pulse_10s_ease-in-out_infinite] scale-105 opacity-60 md:opacity-100">
         </div>
 
         <div class="absolute inset-0 z-10 bg-gradient-to-r from-herbal-900/95 via-herbal-900/80 to-herbal-900/40"></div>
 
-        <div class="relative z-20 container mx-auto px-6 grid md:grid-cols-2 items-center gap-12 mt-8">
+        <div class="relative z-20 container mx-auto px-6 grid md:grid-cols-2 items-center gap-12 py-12 md:py-0">
             
             <div class="text-white max-w-2xl fade-in-up" style="animation-delay: 0.1s;">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
@@ -91,20 +91,24 @@
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-200 to-green-400">potencializando</span> sua vida.
                 </h1>
                 
-                <p class="text-lg text-green-50 mb-8 font-light leading-relaxed max-w-lg opacity-90">
+                <p class="text-lg text-green-50 font-light leading-relaxed max-w-lg opacity-90">
                     Ingredientes de padrão internacional selecionados para garantir máxima absorção e resultados reais. O cuidado que o seu corpo merece.
                 </p>
+            </div>
+
+            <div class="flex flex-col gap-10 md:items-start md:pl-12 fade-in-up" style="animation-delay: 0.3s;">
                 
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#produtos" class="bg-white text-herbal-900 font-bold px-8 py-4 rounded-full hover:bg-green-50 transition shadow-[0_0_20px_rgba(255,255,255,0.2)] text-center transform hover:scale-105 duration-200">
+                <div class="flex flex-col w-full gap-4">
+                    <a href="#produtos" class="bg-white text-herbal-900 font-bold px-8 py-5 rounded-full hover:bg-green-50 transition shadow-[0_0_20px_rgba(255,255,255,0.2)] text-center transform hover:scale-105 duration-200 text-lg w-full md:w-auto md:max-w-xs">
                         Ver Coleção Premium
                     </a>
-                    <a href="#sobre" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/30 hover:bg-white/10 transition text-white font-medium">
+                    <a href="#sobre" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/30 hover:bg-white/10 transition text-white font-medium w-full md:w-auto md:max-w-xs">
                         Nossa História
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </a>
                 </div>
 
-                <div class="mt-12 pt-8 border-t border-white/10 flex flex-wrap gap-6 md:gap-12 opacity-90">
+                <div class="flex flex-wrap gap-6 text-white pt-4 border-t border-white/10 w-full md:max-w-md">
                     <div class="flex items-center gap-3 group cursor-default">
                         <div class="p-2 bg-white/10 rounded-lg group-hover:bg-white/20 transition">
                             <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -118,6 +122,7 @@
                         <span class="text-sm font-medium leading-tight">Ingredientes<br>Naturais</span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
