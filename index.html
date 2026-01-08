@@ -1,57 +1,292 @@
-<section class="relative h-[600px] flex items-center justify-center overflow-hidden">
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HerbalVita - Nutrição e Equilíbrio Natural</title>
+    <meta name="description" content="Conheça a linha de produtos naturais da HerbalVita. Qualidade, transparência e bem-estar para a sua rotina.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        herbal: {
+                            50: '#f2fcf5',
+                            100: '#e1f8e8',
+                            300: '#86efac',
+                            500: '#22c55e', 
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d', // Verde Floresta Profundo
+                        },
+                        stone: {
+                            850: '#1c1917',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animações sutis para experiência premium */
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="font-sans text-stone-700 bg-stone-50 antialiased">
+
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-stone-100">
+        <nav class="container mx-auto px-6 py-3 md:py-4 flex justify-between items-center">
+            <div class="flex-shrink-0">
+                <a href="#">
+                    <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/criativos/logo_herbalvita_hd1.png" alt="HerbalVita Logo" class="h-10 md:h-12 w-auto object-contain">
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-stone-600">
+                <a href="#sobre" class="hover:text-herbal-700 transition">A Marca</a>
+                <a href="#produtos" class="hover:text-herbal-700 transition">Produtos</a>
+                <a href="#qualidade" class="hover:text-herbal-700 transition">Qualidade</a>
+            </div>
+
+            <a href="#produtos" class="bg-herbal-900 hover:bg-herbal-700 text-white px-6 py-2.5 rounded-full text-sm font-medium transition shadow-md flex items-center gap-2">
+                Conhecer Linha
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+        </nav>
+    </header>
+
+    <section class="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
         
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1470114716159-e389f87b9645?q=80&w=2070&auto=format&fit=crop" 
                  alt="Natureza e Bem-estar" 
-                 class="w-full h-full object-cover">
+                 class="w-full h-full object-cover animate-[pulse_10s_ease-in-out_infinite] scale-105">
         </div>
 
-        <div class="absolute inset-0 z-10 bg-gradient-to-r from-herbal-900/95 via-herbal-900/80 to-herbal-800/40"></div>
+        <div class="absolute inset-0 z-10 bg-gradient-to-r from-herbal-900/95 via-herbal-900/80 to-herbal-900/40"></div>
 
-        <div class="relative z-20 container mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
+        <div class="relative z-20 container mx-auto px-6 grid md:grid-cols-2 items-center gap-12 mt-8">
             
-            <div class="text-white max-w-2xl">
+            <div class="text-white max-w-2xl fade-in-up" style="animation-delay: 0.1s;">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
                     <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                    <span class="text-xs font-medium tracking-wide uppercase">Fórmula Exclusiva HerbalVita</span>
+                    <span class="text-xs font-medium tracking-wide uppercase text-green-50">Fórmula Exclusiva HerbalVita</span>
                 </div>
 
-                <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight shadow-sm">
+                <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight shadow-sm drop-shadow-lg">
                     A pureza da natureza <br> 
-                    <span class="text-green-300">potencializando</span> sua vida.
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-200 to-green-400">potencializando</span> sua vida.
                 </h1>
                 
-                <p class="text-lg text-gray-100 mb-8 font-light leading-relaxed max-w-lg">
+                <p class="text-lg text-green-50 mb-8 font-light leading-relaxed max-w-lg opacity-90">
                     Ingredientes de padrão internacional selecionados para garantir máxima absorção e resultados reais. O cuidado que o seu corpo merece.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#produtos" class="bg-white text-herbal-900 font-bold px-8 py-4 rounded-full hover:bg-green-50 transition shadow-[0_0_20px_rgba(255,255,255,0.3)] text-center">
+                    <a href="#produtos" class="bg-white text-herbal-900 font-bold px-8 py-4 rounded-full hover:bg-green-50 transition shadow-[0_0_20px_rgba(255,255,255,0.2)] text-center transform hover:scale-105 duration-200">
                         Ver Coleção Premium
                     </a>
                     <a href="#sobre" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/30 hover:bg-white/10 transition text-white font-medium">
                         Nossa História
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </a>
                 </div>
 
-                <div class="mt-12 pt-8 border-t border-white/10 flex flex-wrap gap-6 md:gap-12 opacity-80">
-                    <div class="flex items-center gap-3">
-                        <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <span class="text-sm font-medium">Qualidade<br>Certificada</span>
+                <div class="mt-12 pt-8 border-t border-white/10 flex flex-wrap gap-6 md:gap-12 opacity-90">
+                    <div class="flex items-center gap-3 group cursor-default">
+                        <div class="p-2 bg-white/10 rounded-lg group-hover:bg-white/20 transition">
+                            <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <span class="text-sm font-medium leading-tight">Qualidade<br>Certificada</span>
                     </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-                        <span class="text-sm font-medium">Ingredientes<br>Naturais</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        <span class="text-sm font-medium">Alta<br>Potência</span>
+                    <div class="flex items-center gap-3 group cursor-default">
+                        <div class="p-2 bg-white/10 rounded-lg group-hover:bg-white/20 transition">
+                            <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        </div>
+                        <span class="text-sm font-medium leading-tight">Ingredientes<br>Naturais</span>
                     </div>
                 </div>
             </div>
-
-            <div class="hidden md:block">
-                </div>
         </div>
     </section>
+
+    <section id="sobre" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1">
+                    <span class="text-herbal-700 font-bold text-sm uppercase tracking-wider mb-2 block">Nossa Filosofia</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-6 leading-tight">Ciência e natureza trabalhando juntas.</h2>
+                    <p class="text-stone-600 mb-6 leading-relaxed">
+                        A HerbalVita nasceu com o propósito de simplificar o cuidado pessoal. Fugimos das soluções artificiais para abraçar o que a terra nos oferece de melhor, refinado por processos seguros e rigorosos.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-herbal-50 flex items-center justify-center text-herbal-700">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-900">Seleção Rigorosa</h4>
+                                <p class="text-sm text-stone-500">Apenas matérias-primas com laudo de pureza entram em nossa linha de produção.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-herbal-50 flex items-center justify-center text-herbal-700">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-stone-900">Transparência Total</h4>
+                                <p class="text-sm text-stone-500">Sem letras miúdas. Você sabe exatamente o que está consumindo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative order-1 md:order-2">
+                    <div class="absolute -inset-4 bg-herbal-100/50 rounded-2xl transform rotate-3 -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070&auto=format&fit=crop" alt="Ingredientes Naturais" class="rounded-xl shadow-2xl object-cover h-[500px] w-full">
+                    
+                    <div class="absolute bottom-8 left-8 bg-white/95 backdrop-blur p-6 rounded-lg shadow-lg border border-stone-100 max-w-xs hidden md:block">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="flex -space-x-2">
+                                <span class="w-8 h-8 rounded-full bg-stone-200 border-2 border-white flex items-center justify-center text-xs">A.S</span>
+                                <span class="w-8 h-8 rounded-full bg-stone-300 border-2 border-white flex items-center justify-center text-xs">M.R</span>
+                                <span class="w-8 h-8 rounded-full bg-stone-400 border-2 border-white flex items-center justify-center text-xs">+1k</span>
+                            </div>
+                            <span class="text-xs font-bold text-herbal-700">Clientes Satisfeitos</span>
+                        </div>
+                        <p class="text-xs text-stone-500 italic">"Finalmente encontrei produtos que respeitam meu corpo e minha rotina."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos" class="py-20 bg-stone-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-herbal-700 font-bold text-xs uppercase tracking-widest bg-herbal-100 px-3 py-1 rounded-full">Nossa Linha</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mt-4 mb-4">Escolha o seu cuidado diário</h2>
+                <p class="text-stone-600">Fórmulas limpas e eficazes, desenvolvidas para necessidades específicas.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-stone-100 product-card flex flex-col relative group">
+                    <div class="absolute top-4 right-4 bg-herbal-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow-sm">
+                        MAIS VENDIDO
+                    </div>
+                    <div class="h-72 bg-gradient-to-br from-pink-50 to-white flex items-center justify-center p-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-pink-100/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        <img src="https://prostvita.com.br/wp-content/uploads/2025/09/kit3.webp" alt="EllaCandy Kit" class="h-full object-contain transform group-hover:scale-105 transition duration-500 relative z-10">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="font-serif text-2xl font-bold text-stone-900 mb-2">EllaCandy Protocolo</h3>
+                        <p class="text-xs font-bold text-pink-500 mb-4 uppercase tracking-wider">Bem-estar Íntimo</p>
+                        <p class="text-stone-600 mb-8 text-sm leading-relaxed flex-grow">
+                            Uma fórmula avançada para mulheres que buscam reequilibrar a flora e recuperar a confiança. Tecnologia natural de alta absorção.
+                        </p>
+                        <a href="/ellacandy.html" class="block text-center bg-stone-900 text-white font-bold py-4 rounded-xl hover:bg-stone-800 transition shadow-lg hover:shadow-xl transform active:scale-95">
+                            Ver Detalhes e Oferta
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col opacity-90 hover:opacity-100">
+                    <div class="h-60 bg-stone-100 flex items-center justify-center overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1594135546059-e935402636e7?q=80&w=2070&auto=format&fit=crop" alt="Vita Daily" class="h-full w-full object-cover">
+                        <div class="absolute inset-0 bg-black/5"></div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-1">VitaDaily A-Z</h3>
+                        <p class="text-xs font-bold text-stone-400 mb-3 uppercase">Energia e Imunidade</p>
+                        <p class="text-stone-500 mb-6 text-sm leading-relaxed flex-grow">
+                            Multivitamínico completo para suprir as necessidades nutricionais do dia a dia moderno.
+                        </p>
+                        <button disabled class="w-full bg-stone-100 text-stone-400 font-bold py-3 rounded-xl border border-stone-200 cursor-not-allowed text-sm">
+                            Esgotado
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col opacity-90 hover:opacity-100">
+                    <div class="h-60 bg-stone-100 flex items-center justify-center overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1515942400420-2b98fed1f515?q=80&w=1974&auto=format&fit=crop" alt="Zen Night" class="h-full w-full object-cover">
+                        <div class="absolute inset-0 bg-blue-900/10"></div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-1">ZenNight</h3>
+                        <p class="text-xs font-bold text-stone-400 mb-3 uppercase">Sono Reparador</p>
+                        <p class="text-stone-500 mb-6 text-sm leading-relaxed flex-grow">
+                            Composto natural para auxiliar no relaxamento noturno e promover um descanso tranquilo.
+                        </p>
+                        <button disabled class="w-full bg-stone-100 text-stone-400 font-bold py-3 rounded-xl border border-stone-200 cursor-not-allowed text-sm">
+                            Esgotado
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="qualidade" class="bg-white py-12 border-t border-stone-200">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h3 class="font-bold text-stone-800 mb-4 text-sm uppercase">Transparência e Responsabilidade</h3>
+            <p class="text-xs text-stone-400 leading-relaxed mb-4">
+                Os produtos comercializados neste site são suplementos alimentares dispensados de registro conforme RDC 240/2018 da ANVISA. Não são medicamentos e não se destinam a diagnosticar, tratar, curar ou prevenir qualquer doença.
+            </p>
+            <p class="text-xs text-stone-400 leading-relaxed">
+                <strong>Isenção de responsabilidade:</strong> Os resultados podem variar de pessoa para pessoa e dependem de fatores individuais como alimentação e estilo de vida. As informações neste site não substituem o aconselhamento médico profissional. Sempre consulte um médico antes de iniciar qualquer suplementação. Este site não é afiliado ao Facebook, Instagram ou Meta Platforms, Inc.
+            </p>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-stone-900 text-stone-300 py-16 border-t border-stone-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/criativos/logo_herbalvita_hd1.png" alt="HerbalVita Logo" class="h-10 w-auto object-contain mb-6 opacity-70 grayscale hover:grayscale-0 transition duration-300 filter bg-white/5 p-2 rounded">
+                    <p class="text-sm leading-relaxed text-stone-400 max-w-sm">
+                        Dedicados a trazer o melhor da natureza para a sua vida através de ciência, transparência e sustentabilidade.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Navegação</h4>
+                    <ul class="space-y-2 text-sm text-stone-400">
+                        <li><a href="#sobre" class="hover:text-herbal-400 transition">Sobre Nós</a></li>
+                        <li><a href="#produtos" class="hover:text-herbal-400 transition">Produtos</a></li>
+                        <li><a href="/ellacandy.html" class="hover:text-herbal-400 transition">Protocolo EllaCandy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-stone-400">
+                        <li><a href="#" class="hover:text-herbal-400 transition">Política de Privacidade</a></li>
+                        <li><a href="#" class="hover:text-herbal-400 transition">Termos de Uso</a></li>
+                        <li><a href="#" class="hover:text-herbal-400 transition">Política de Reembolso</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-stone-500 gap-4">
+                <p>&copy; 2025 Herbal Vita Produtos Naturais Ltda.</p>
+                <p>CNPJ: 00.000.000/0001-00 | Av. Paulista, 1000 - São Paulo/SP</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
