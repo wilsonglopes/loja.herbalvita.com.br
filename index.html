@@ -1,380 +1,835 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>HerbalVita - Excelência em Suplementação Natural</title>
+
     <meta name="description" content="Há mais de 4 anos no mercado oferecendo produtos naturais de alta eficácia. Matéria-prima premium e resultados reais.">
+
     
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
     
+
     <script>
+
         tailwind.config = {
+
             theme: {
+
                 extend: {
+
                     fontFamily: {
+
                         sans: ['Inter', 'sans-serif'],
+
                         serif: ['Playfair Display', 'serif'],
+
                     },
+
                     colors: {
+
                         herbal: {
+
                             50: '#f2fcf5',
+
                             100: '#e1f8e8',
+
                             300: '#86efac',
+
                             500: '#22c55e', 
+
                             700: '#15803d',
+
                             800: '#166534',
+
                             900: '#14532d', // Verde Floresta Profundo
+
                         },
+
                         stone: {
+
                             850: '#1c1917',
+
                         }
+
                     }
+
                 }
+
             }
+
         }
+
     </script>
+
     <style>
+
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+
         .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+
         @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
     </style>
+
 </head>
+
 <body class="font-sans text-stone-700 bg-stone-50 antialiased">
 
+
+
     <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-stone-100">
+
         <nav class="container mx-auto px-6 py-3 md:py-4 flex justify-between items-center">
+
             <div class="flex-shrink-0">
+
                 <a href="#">
+
                     <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/criativos/logo_herbalvita_hd1.png" alt="HerbalVita Logo" class="h-10 md:h-12 w-auto object-contain">
+
                 </a>
+
             </div>
+
             
+
             <div class="hidden md:flex space-x-8 text-sm font-medium text-stone-600">
+
                 <a href="#sobre" class="hover:text-herbal-700 transition">A Marca</a>
+
                 <a href="#produtos" class="hover:text-herbal-700 transition">Produtos</a>
+
                 <a href="#qualidade" class="hover:text-herbal-700 transition">Qualidade</a>
+
             </div>
+
+
 
             <a href="#produtos" class="bg-herbal-900 hover:bg-herbal-700 text-white px-6 py-2.5 rounded-full text-sm font-medium transition shadow-md flex items-center gap-2">
+
                 Conhecer Linha
+
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+
             </a>
+
         </nav>
+
 <!-- Clarity Code -->
+
         <script type="text/javascript">
+
     (function(c,l,a,r,i,t,y){
+
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+
     })(window, document, "clarity", "script", "v0b2giqo1o");
+
 </script>
+
         <!-- Clarity Code End-->
+
         
+
         <!-- Meta Pixel Code -->
+
 <script>
+
 !function(f,b,e,v,n,t,s)
+
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+
 n.queue=[];t=b.createElement(e);t.async=!0;
+
 t.src=v;s=b.getElementsByTagName(e)[0];
+
 s.parentNode.insertBefore(t,s)}(window, document,'script',
+
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '959090826075367');
+
 fbq('track', 'PageView');
+
 </script>
+
 <noscript><img height="1" width="1" style="display:none"
+
 src="https://www.facebook.com/tr?id=959090826075367&ev=PageView&noscript=1"
+
 /></noscript>
+
 <!-- End Meta Pixel Code -->
+
         
+
     </header>
 
+
+
     <section class="relative min-h-[500px] md:h-[550px] flex items-center justify-center overflow-hidden bg-herbal-900">
+
         <div class="absolute inset-0 z-0">
+
             <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/criativos/naturais_products.jpg" 
+
                  alt="Produtos Naturais HerbalVita" 
+
                  class="w-full h-full object-cover animate-[pulse_10s_ease-in-out_infinite] scale-105 opacity-60 md:opacity-100">
+
         </div>
+
         <div class="absolute inset-0 z-10 bg-gradient-to-r from-herbal-900/95 via-herbal-900/85 to-herbal-900/50"></div>
+
         <div class="relative z-20 container mx-auto px-6 grid md:grid-cols-2 items-center gap-12 py-12 md:py-0">
+
             <div class="text-white max-w-2xl fade-in-up" style="animation-delay: 0.1s;">
+
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-800/50 border border-green-400/30 backdrop-blur-md mb-6 shadow-lg">
+
                     <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+
                     <span class="text-xs font-bold tracking-wide uppercase text-green-50">Mais de 4 Anos de Mercado</span>
+
                 </div>
+
                 <h1 class="font-serif text-4xl md:text-5xl font-bold mb-6 leading-tight shadow-sm drop-shadow-lg">
+
                     Alta eficácia e tradição <br> 
+
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-200 to-green-400">cuidando de você.</span>
+
                 </h1>
+
                 <p class="text-lg text-green-50 font-light leading-relaxed max-w-lg opacity-90">
+
                     Há 4 anos desenvolvendo fórmulas testadas com matéria-prima de padrão internacional. Uma história construída com a confiança de quem vê os resultados na prática.
+
                 </p>
+
             </div>
+
             <div class="flex flex-col gap-8 md:items-start md:pl-12 fade-in-up" style="animation-delay: 0.3s;">
+
                 <div class="flex flex-col w-full gap-4">
+
                     <a href="#produtos" class="bg-white text-herbal-900 font-bold px-8 py-5 rounded-full hover:bg-green-50 transition shadow-[0_0_25px_rgba(255,255,255,0.25)] text-center transform hover:scale-105 duration-200 text-lg w-full md:w-auto md:max-w-xs border-2 border-transparent hover:border-green-100">
+
                         Ver Produtos Testados
+
                     </a>
+
                     <a href="#sobre" class="flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/30 hover:bg-white/10 transition text-white font-medium w-full md:w-auto md:max-w-xs">
+
                         Conhecer Nossa História
+
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+
                     </a>
+
                 </div>
+
                 <div class="flex flex-wrap gap-6 text-white pt-4 border-t border-white/10 w-full md:max-w-md">
+
                     <div class="flex items-center gap-3 group cursor-default">
+
                         <div class="p-2 bg-white/10 rounded-lg group-hover:bg-white/20 transition">
+
                             <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+
                         </div>
+
                         <span class="text-sm font-medium leading-tight">Matéria-Prima<br>Premium</span>
+
                     </div>
+
                     <div class="flex items-center gap-3 group cursor-default">
+
                         <div class="p-2 bg-white/10 rounded-lg group-hover:bg-white/20 transition">
+
                             <svg class="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+
                         </div>
+
                         <span class="text-sm font-medium leading-tight">Alta<br>Eficácia</span>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <section id="sobre" class="py-16 md:py-24 bg-white">
+
         <div class="container mx-auto px-6">
+
             <div class="grid md:grid-cols-2 gap-16 items-center">
+
                 <div class="order-2 md:order-1">
+
                     <span class="text-herbal-700 font-bold text-sm uppercase tracking-wider mb-2 block">Nossa Trajetória</span>
+
                     <h2 class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-6 leading-tight">4 Anos de compromisso com resultados reais.</h2>
+
                     <p class="text-stone-600 mb-6 leading-relaxed">
+
                         A HerbalVita não nasceu ontem. Há mais de quatro anos, estudamos e aperfeiçoamos nossas formulações. Fugimos de soluções mágicas para entregar o que a natureza oferece de melhor, processado com rigor técnico para garantir a pureza que você merece.
+
                     </p>
+
                     <div class="space-y-6">
+
                         <div class="flex gap-4">
+
                             <div class="flex-shrink-0 w-12 h-12 rounded-full bg-herbal-50 flex items-center justify-center text-herbal-700">
+
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+
                             </div>
+
                             <div>
+
                                 <h4 class="font-bold text-stone-900">Segurança Total</h4>
+
                                 <p class="text-sm text-stone-500">Produtos consolidados no mercado e aprovados por clientes exigentes.</p>
+
                             </div>
+
                         </div>
+
                         <div class="flex gap-4">
+
                             <div class="flex-shrink-0 w-12 h-12 rounded-full bg-herbal-50 flex items-center justify-center text-herbal-700">
+
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+
                             </div>
+
                             <div>
+
                                 <h4 class="font-bold text-stone-900">Matéria-Prima de Ponta</h4>
+
                                 <p class="text-sm text-stone-500">Selecionamos apenas ingredientes de alta potência e pureza.</p>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
                 <div class="relative order-1 md:order-2">
+
                     <div class="absolute -inset-4 bg-herbal-100/50 rounded-2xl transform rotate-3 -z-10"></div>
+
                     <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/criativos/naturais_products.jpg" 
+
                          alt="Ingredientes Naturais" 
+
                          class="rounded-xl shadow-2xl object-cover h-[500px] w-full">
+
                     <div class="absolute bottom-8 left-8 bg-white/95 backdrop-blur p-6 rounded-lg shadow-lg border border-stone-100 max-w-xs hidden md:block">
+
                         <div class="flex items-center gap-3 mb-2">
+
                             <div class="flex -space-x-2">
+
                                 <span class="w-8 h-8 rounded-full bg-stone-200 border-2 border-white flex items-center justify-center text-xs">A.S</span>
+
                                 <span class="w-8 h-8 rounded-full bg-stone-300 border-2 border-white flex items-center justify-center text-xs">M.R</span>
+
                                 <span class="w-8 h-8 rounded-full bg-stone-400 border-2 border-white flex items-center justify-center text-xs">+4k</span>
+
                             </div>
+
                             <span class="text-xs font-bold text-herbal-700">Milhares de Clientes</span>
+
                         </div>
+
                         <p class="text-xs text-stone-500 italic">"Confio na HerbalVita pelos anos de resultados consistentes."</p>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
+
+
     <section id="produtos" class="py-20 bg-stone-50">
+
         <div class="container mx-auto px-6">
+
             <div class="text-center max-w-2xl mx-auto mb-16">
+
                 <span class="text-herbal-700 font-bold text-xs uppercase tracking-widest bg-herbal-100 px-3 py-1 rounded-full">Nossa Linha Completa</span>
+
                 <h2 class="font-serif text-3xl md:text-4xl font-bold text-stone-900 mt-4 mb-4">Soluções naturais para cada necessidade</h2>
+
                 <p class="text-stone-600">Explore nossa coleção de fórmulas desenvolvidas para otimizar sua saúde e bem-estar.</p>
+
             </div>
+
+
 
             <div class="grid md:grid-cols-3 gap-8">
 
-    <!-- ProstVita -->
-    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
-        <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
-            <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/prostvita.jpg" alt="Prostvita" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">ProstVita</h3>
-            <p class="text-xs font-bold text-blue-600 mb-3 uppercase tracking-wider">Saúde do Homem</p>
-            <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Proteção e cuidado essencial para a vitalidade masculina.</p>
-            <a href="https://herbalvita.com.br/prostvitavar/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
-        </div>
-    </div>
+                
 
-    <!-- Biostromax -->
-    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
-        <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
-            <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/biostromax.jpg" alt="Biostromax" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Biostromax</h3>
-            <p class="text-xs font-bold text-purple-600 mb-3 uppercase tracking-wider">Equilíbrio Hormonal</p>
-            <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Harmonia natural para o seu corpo em todas as fases.</p>
-            <a href="https://herbalvita.com.br/bio-stromax/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
-        </div>
-    </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-stone-100 product-card flex flex-col relative group">
 
-    <!-- Magnésio Treonato -->
-    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
-        <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
-            <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/magnesio_treonato.jpg" alt="Magnésio Treonato" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Magnésio Treonato</h3>
-            <p class="text-xs font-bold text-indigo-500 mb-3 uppercase tracking-wider">Foco e Mente</p>
-            <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Clareza mental e concentração para o seu dia a dia.</p>
-            <a href="https://herbalvita.com.br/magnesio-treonato/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
-        </div>
-    </div>
+                    <div class="absolute top-4 right-4 bg-herbal-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow-sm">DESTAQUE</div>
 
-    <!-- Vitaliby -->
-    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
-        <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
-            <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/vitaliby.jpg" alt="Vitaliby" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Vitaliby</h3>
-            <p class="text-xs font-bold text-rose-600 mb-3 uppercase tracking-wider">Vigor e Potência</p>
-            <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Energia e confiança para os seus melhores momentos.</p>
-            <a href="https://herbalvita.com.br/vitaliby/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
-        </div>
-    </div>
+                    <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
 
-    <!-- Camapu -->
-    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
-        <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
-            <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/camapu.jpg" alt="Camapu" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Camapu</h3>
-            <p class="text-xs font-bold text-green-600 mb-3 uppercase tracking-wider">Memória Ativa</p>
-            <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Nutrientes essenciais para a saúde cognitiva e lembranças.</p>
-            <a href="https://herbalvita.com.br/camapu60ml/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
-        </div>
-    </div>
+                        <img src="https://prostvita.com.br/wp-content/uploads/2025/09/kit3.webp" alt="EllaCandy Protocolo" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
 
-    <!-- Curcuvita -->
-    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
-        <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
-            <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/curcuvita.jpg" alt="Curcuvita" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Curcuvita</h3>
-            <p class="text-xs font-bold text-yellow-500 mb-3 uppercase tracking-wider">Articulações Livres</p>
-            <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Movimente-se com liberdade e conforto todos os dias.</p>
-            <a href="https://herbalvita.com.br/curcuvita/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
-        </div>
-    </div>
+                    </div>
 
-    <!-- BioO3 -->
-    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
-        <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
-            <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/bioO3.jpg" alt="BioO3" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">BioO3</h3>
-            <p class="text-xs font-bold text-cyan-600 mb-3 uppercase tracking-wider">Conforto Articular</p>
-            <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Fórmula avançada para quem busca conforto nas articulações e mais liberdade de movimento no dia a dia.</p>
-            <a href="https://herbalvita.com.br/bio-o3-ozonio/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
-        </div>
-    </div>
+                    <div class="p-6 flex flex-col flex-grow">
 
-    <!-- Anti-Fett -->
-    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
-        <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
-            <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/anti-fett.jpg" alt="Anti-Fett" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Anti-Fett</h3>
-            <p class="text-xs font-bold text-orange-500 mb-3 uppercase tracking-wider">Controle de Medidas</p>
-            <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Suporte natural para o seu metabolismo e objetivos corporais.</p>
-            <a href="https://herbalvita.com.br/bioantifett/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
-        </div>
-    </div>
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">EllaCandy Protocolo</h3>
 
-    <!-- Biovein -->
-    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
-        <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
-            <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/biovein.jpg" alt="Biovein" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-grow">
-            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Biovein</h3>
-            <p class="text-xs font-bold text-red-500 mb-3 uppercase tracking-wider">Circulação e Leveza</p>
-            <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Nutrição para pernas leves e circulação saudável.</p>
-            <a href="https://herbalvita.com.br/biovein/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
-        </div>
-    </div>
+                        <p class="text-xs font-bold text-pink-500 mb-3 uppercase tracking-wider">Cuidado Íntimo</p>
 
-    <!-- Restante (mantidos) -->
-    <!-- EllaCandy, Resvera, Diagota, Sellowin permanecem após -->
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Equilíbrio da flora e confiança para o dia a dia da mulher.</p>
 
-</div>
+                        <a href="https://herbalvita.com.br/ellacandy/p" class="block text-center bg-stone-900 text-white font-medium py-3 rounded-lg hover:bg-stone-800 transition">Comprar Agora</a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
+
+                    <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
+
+                        <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/resvera.jpg" alt="Resvera" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Resvera</h3>
+
+                        <p class="text-xs font-bold text-purple-600 mb-3 uppercase tracking-wider">Rejuvenescimento e Firmeza</p>
+
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Fórmula americana com resveratrol e ativos exclusivos para firmar, hidratar e devolver o brilho natural à sua pele.</p>
+
+                        <a href="https://herbalvita.com.br/resvera/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
+
+                    <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
+
+                        <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/diagota.jpg" alt="Diagota" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Diagota</h3>
+
+                        <p class="text-xs font-bold text-emerald-600 mb-3 uppercase tracking-wider">Equilíbrio da Glicose</p>
+
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Tecnologia de prensagem a frio com extratos naturais para auxiliar na manutenção de níveis saudáveis de açúcar no sangue.</p>
+
+                        <a href="https://www.herbalvita.com.br/diagota/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
+
+                    <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
+
+                        <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/bioO3.jpg" alt="BioO3" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">BioO3</h3>
+
+                        <p class="text-xs font-bold text-cyan-600 mb-3 uppercase tracking-wider">Conforto Articular</p>
+
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Fórmula avançada para quem busca conforto nas articulações e mais liberdade de movimento no dia a dia.</p>
+
+                        <a href="https://herbalvita.com.br/bio-o3-ozonio/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
+
+                    <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
+
+                        <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/prostvita.jpg" alt="Prostvita" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">ProstVita</h3>
+
+                        <p class="text-xs font-bold text-blue-600 mb-3 uppercase tracking-wider">Saúde do Homem</p>
+
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Proteção e cuidado essencial para a vitalidade masculina.</p>
+
+                        <a href="https://herbalvita.com.br/prostvitavar/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
+
+                    <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
+
+                        <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/anti-fett.jpg" alt="Anti-Fett" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Anti-Fett</h3>
+
+                        <p class="text-xs font-bold text-orange-500 mb-3 uppercase tracking-wider">Controle de Medidas</p>
+
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Suporte natural para o seu metabolismo e objetivos corporais.</p>
+
+                        <a href="https://herbalvita.com.br/bioantifett/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
+
+                    <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
+
+                        <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/biostromax.jpg" alt="Biostromax" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Biostromax</h3>
+
+                        <p class="text-xs font-bold text-purple-600 mb-3 uppercase tracking-wider">Equilíbrio Hormonal</p>
+
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Harmonia natural para o seu corpo em todas as fases.</p>
+
+                        <a href="https://herbalvita.com.br/bio-stromax/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
+
+                    <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
+
+                        <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/biovein.jpg" alt="Biovein" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Biovein</h3>
+
+                        <p class="text-xs font-bold text-red-500 mb-3 uppercase tracking-wider">Circulação e Leveza</p>
+
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Nutrição para pernas leves e circulação saudável.</p>
+
+                        <a href="https://herbalvita.com.br/biovein/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
+
+                    <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
+
+                        <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/curcuvita.jpg" alt="Curcuvita" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Curcuvita</h3>
+
+                        <p class="text-xs font-bold text-yellow-500 mb-3 uppercase tracking-wider">Articulações Livres</p>
+
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Movimente-se com liberdade e conforto todos os dias.</p>
+
+                        <a href="https://herbalvita.com.br/curcuvita/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
+
+                    <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
+
+                        <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/magnesio_treonato.jpg" alt="Magnésio Treonato" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Magnésio Treonato</h3>
+
+                        <p class="text-xs font-bold text-indigo-500 mb-3 uppercase tracking-wider">Foco e Mente</p>
+
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Clareza mental e concentração para o seu dia a dia.</p>
+
+                        <a href="https://herbalvita.com.br/magnesio-treonato/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
+
+                    <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
+
+                        <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/vitaliby.jpg" alt="Vitaliby" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Vitaliby</h3>
+
+                        <p class="text-xs font-bold text-rose-600 mb-3 uppercase tracking-wider">Vigor e Potência</p>
+
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Energia e confiança para os seus melhores momentos.</p>
+
+                        <a href="https://herbalvita.com.br/vitaliby/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
+
+                    <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
+
+                        <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/camapu.jpg" alt="Camapu" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Camapu</h3>
+
+                        <p class="text-xs font-bold text-green-600 mb-3 uppercase tracking-wider">Memória Ativa</p>
+
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Nutrientes essenciais para a saúde cognitiva e lembranças.</p>
+
+                        <a href="https://herbalvita.com.br/camapu60ml/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-stone-100 product-card flex flex-col relative group">
+
+                    <div class="h-64 bg-stone-50 flex items-center justify-center p-6 overflow-hidden">
+
+                        <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/produtos/sellowin.jpg" alt="Sellowin" class="h-full object-contain transform group-hover:scale-105 transition duration-500">
+
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow">
+
+                        <h3 class="font-serif text-xl font-bold text-stone-900 mb-2">Sellowin</h3>
+
+                        <p class="text-xs font-bold text-sky-500 mb-3 uppercase tracking-wider">Saúde Respiratória</p>
+
+                        <p class="text-stone-600 text-sm leading-relaxed mb-6 flex-grow">Bem-estar para respirar fundo e aproveitar a vida.</p>
+
+                        <a href="https://herbalvita.com.br/sellowin/p" class="block text-center bg-herbal-700 text-white font-medium py-3 rounded-lg hover:bg-herbal-800 transition shadow-md">Comprar Agora</a>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
     </section>
+
+
 
     <section id="qualidade" class="bg-white py-12 border-t border-stone-200">
+
         <div class="container mx-auto px-6 max-w-4xl text-center">
+
             <h3 class="font-bold text-stone-800 mb-4 text-sm uppercase">Transparência e Responsabilidade</h3>
+
             <p class="text-xs text-stone-400 leading-relaxed mb-4">
+
                 Os produtos comercializados neste site são suplementos alimentares dispensados de registro conforme RDC 240/2018 da ANVISA. Não são medicamentos e não se destinam a diagnosticar, tratar, curar ou prevenir qualquer doença.
+
             </p>
+
             <p class="text-xs text-stone-400 leading-relaxed">
+
                 <strong>Isenção de responsabilidade:</strong> Os resultados podem variar de pessoa para pessoa e dependem de fatores individuais como alimentação e estilo de vida. As informações neste site não substituem o aconselhamento médico profissional. Sempre consulte um médico antes de iniciar qualquer suplementação. Este site não é afiliado ao Facebook, Instagram ou Meta Platforms, Inc.
+
             </p>
+
         </div>
+
     </section>
 
+
+
     <footer id="contato" class="bg-stone-900 text-stone-300 py-12 border-t border-stone-800">
+
         <div class="container mx-auto px-6 text-center">
+
             <div class="grid md:grid-cols-4 gap-12 mb-12 text-left">
+
                 <div class="md:col-span-2">
+
                     <img src="https://lrbykdpwzixmgganirvo.supabase.co/storage/v1/object/public/criativos/logo_herbalvita_hd1.png" alt="HerbalVita Logo" class="h-10 w-auto object-contain mb-6 opacity-70 grayscale hover:grayscale-0 transition duration-300 filter bg-white/5 p-2 rounded">
+
                     <p class="text-sm leading-relaxed text-stone-400 max-w-sm">
+
                         Desde 2021 trazendo o melhor da natureza para a sua vida através de ciência, transparência e sustentabilidade.
+
                     </p>
-                </div>
-                
-                <div>
-                    <h4 class="text-white font-bold mb-4">Navegação</h4>
-                    <ul class="space-y-2 text-sm text-stone-400">
-                        <li><a href="#sobre" class="hover:text-herbal-400 transition">Sobre Nós</a></li>
-                        <li><a href="#produtos" class="hover:text-herbal-400 transition">Produtos</a></li>                       
-                    </ul>
+
                 </div>
 
+                
+
                 <div>
-                    <h4 class="text-white font-bold mb-4">Legal</h4>
+
+                    <h4 class="text-white font-bold mb-4">Navegação</h4>
+
                     <ul class="space-y-2 text-sm text-stone-400">
-                        <li><a href="politica-privacidade.html" class="hover:text-herbal-400 transition">Política de Privacidade</a></li>
-                        <li><a href="termos-de-uso.html" class="hover:text-herbal-400 transition">Termos de Uso</a></li>
-                        <li><a href="politica-reembolso.html" class="hover:text-herbal-400 transition">Política de Reembolso</a></li>
+
+                        <li><a href="#sobre" class="hover:text-herbal-400 transition">Sobre Nós</a></li>
+
+                        <li><a href="#produtos" class="hover:text-herbal-400 transition">Produtos</a></li>                       
+
                     </ul>
+
                 </div>
+
+
+
+                <div>
+
+                    <h4 class="text-white font-bold mb-4">Legal</h4>
+
+                    <ul class="space-y-2 text-sm text-stone-400">
+
+                        <li><a href="politica-privacidade.html" class="hover:text-herbal-400 transition">Política de Privacidade</a></li>
+
+                        <li><a href="termos-de-uso.html" class="hover:text-herbal-400 transition">Termos de Uso</a></li>
+
+                        <li><a href="politica-reembolso.html" class="hover:text-herbal-400 transition">Política de Reembolso</a></li>
+
+                    </ul>
+
+                </div>
+
             </div>
+
+
 
             <div class="border-t border-stone-800 pt-8 text-xs text-stone-500">
+
                 <p>&copy; 2025 Herbal Vita Produtos Naturais Ltda.</p>
+
                 <p>CNPJ: 43.729.130/0001-72 | Rod SO 202, 801 - Sombrio/SC</p>
+
             </div>
+
         </div>
+
     </footer>
 
+
+
 </body>
+
 </html>
