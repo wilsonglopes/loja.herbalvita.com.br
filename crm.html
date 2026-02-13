@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM WhatsApp - Herbal Vita</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+    <div class="max-w-5xl mx-auto">
+        <header class="flex justify-between items-center mb-8">
+            <h1 class="text-2xl font-bold text-stone-800">Controle de Vendas WhatsApp</h1>
+            <button onclick="toggleModal()" class="bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-700">+ Nova Venda</button>
+        </header>
+
+        <div class="mb-6">
+            <input type="text" id="searchBar" onkeyup="searchVendas()" placeholder="Buscar por Nome, Apelido ou WhatsApp..." class="w-full p-4 rounded-xl border-none shadow-sm focus:ring-2 focus:ring-green-500">
+        </div>
+
+        <div id="vendas-lista" class="grid gap-4">
+            <p class="text-center text-gray-500">Carregando dados...</p>
+        </div>
+    </div>
+
+    <div id="modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-xl p-6 w-full max-w-lg">
+            <h2 class="text-xl font-bold mb-4">Cadastrar Nova Venda</h2>
+            <form id="vendaForm" class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="text" id="nome" placeholder="Nome Completo" class="border p-2 rounded w-full" required>
+                    <input type="text" id="apelido" placeholder="Apelido (ex: João do Pneu)" class="border p-2 rounded w-full">
+                </div>
+                <input type="text" id="whatsapp" placeholder="WhatsApp (com DDD)" class="border p-2 rounded w-full">
+                <input type="text" id="produto" placeholder="Produto (ex: 3 Frascos CandVita)" class="border p-2 rounded w-full">
+                <textarea id="endereco" placeholder="Endereço de Entrega Completo" class="border p-2 rounded w-full h-24"></textarea>
+                <div class="flex justify-end gap-2">
+                    <button type="button" onclick="toggleModal()" class="px-4 py-2 text-gray-600">Cancelar</button>
+                    <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded font-bold">Salvar Venda</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const SUPABASE_URL = 'SUA_URL_AQUI';
+        const SUPABASE_KEY = 'SUA_KEY_AQUI';
+        const supabase =维持.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        async function loadVendas() {
+            const { data, error } = await supabase.from('vendas_whatsapp').select('*').order('created_at', { ascending: false });
+            if (data) renderVendas(data);
+        }
+
+        function renderVendas(vendas) {
+            const container = document.getElementById('vendas-lista');
+            container.innerHTML = vendas.map(v => `
+                <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-green-500 flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-lg">${v.nome_cliente} <span class="text-sm text-gray-500 font-normal">(${v.apelido || 'Sem apelido'})</span></h3>
+                        <p class="text-sm text-gray-600"><strong>Produto:</strong> ${v.produto_vendido}</p>
+                        <p class="text-xs text-gray-500 mt-1"><strong>Endereço:</strong> ${v.endereco_completo || 'Não informado'}</p>
+                    </div>
+                    <div class="text-right">
+                        <a href="https://wa.me/${v.whatsapp?.replace(/\D/g,'')}" target="_blank" class="text-green-600 font-bold text-sm block mb-2">WhatsApp: ${v.whatsapp}</a>
+                        <span class="text-xs text-gray-400">${new Date(v.data_venda).toLocaleDateString()}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        async function searchVendas() {
+            const term = document.getElementById('searchBar').value;
+            const { data } = await supabase.from('vendas_whatsapp')
+                .select('*')
+                .or(`nome_cliente.ilike.%${term}%,apelido.ilike.%${term}%,whatsapp.ilike.%${term}%`);
+            renderVendas(data);
+        }
+
+        document.getElementById('vendaForm').onsubmit = async (e) => {
+            e.preventDefault();
+            const payload = {
+                nome_cliente: document.getElementById('nome').value,
+                apelido: document.getElementById('apelido').value,
+                whatsapp: document.getElementById('whatsapp').value,
+                produto_vendido: document.getElementById('produto').value,
+                endereco_completo: document.getElementById('endereco').value
+            };
+            const { error } = await supabase.from('vendas_whatsapp').insert([payload]);
+            if (!error) { toggleModal(); loadVendas(); e.target.reset(); }
+        };
+
+        function toggleModal() { document.getElementById('modal').classList.toggle('hidden'); document.getElementById('modal').classList.toggle('flex'); }
+        loadVendas();
+    </script>
+</body>
+</html>
